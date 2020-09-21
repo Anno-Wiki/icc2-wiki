@@ -65,7 +65,6 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
             tweetText
             logo {
               link
-              image
             }
             headerLinks {
               link
@@ -90,23 +89,22 @@ const Header = ({ location, isDarkThemeActive, toggleActiveTheme }) => (
         },
       } = data;
 
-      const finalLogoLink = logo.link !== '' ? logo.link : 'https://hasura.io/';
+      const finalLogoLink = logo.link !== '' ? logo.link : 'https://anno.wiki/';
 
       return (
         <div className={'navBarWrapper'}>
           <nav className={'navBarDefault'}>
             <div className={'navBarHeader'}>
-              <Link to={finalLogoLink} className={'navBarBrand'}>
+              <Link
+                to={finalLogoLink}
+                className={'navBarBrand'}
+              >
                 <img
-                  className={'img-responsive displayInline'}
-                  src={logo.image !== '' ? logo.image : logoImg}
+                  src={logoImg}
                   alt={'logo'}
+                  style={{ height: '60px' }}
                 />
               </Link>
-              <div
-                className={'headerTitle displayInline'}
-                dangerouslySetInnerHTML={{ __html: headerTitle }}
-              />
             </div>
             {config.header.social ? (
               <ul
