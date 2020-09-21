@@ -30,10 +30,10 @@ const config = {
   sidebar: {
     forcedNavOrder: [
       '/introduction', // add trailing slash if enabled above
-      '/codeblock',
+      '/textus',
     ],
     collapsedNav: [
-      '/codeblock', // add trailing slash if enabled above
+      '/textus', // add trailing slash if enabled above
     ],
     links: [{ text: 'anno.wiki', link: 'https://anno.wiki' }],
     frontline: false,
