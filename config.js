@@ -1,7 +1,7 @@
 const config = {
   gatsby: {
     pathPrefix: '/',
-    siteUrl: 'https://hasura.io',
+    siteUrl: 'https://wiki.anno.wiki',
     gaTrackingId: null,
     trailingSlash: false,
   },
