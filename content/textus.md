@@ -1,5 +1,5 @@
 ---
-title: "About Textus"
+title: "Textus Project Documentation Mirror"
 metaTitle: "About Textus"
 metaDescription: "Descriptions and mirrored documentation on The Textus Project"
 ---
