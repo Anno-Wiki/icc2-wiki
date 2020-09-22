@@ -31,6 +31,7 @@ const config = {
     forcedNavOrder: [
       '/introduction', // add trailing slash if enabled above
       '/textus',
+      '/bibjson',
       '/repos',
       '/development'
     ],
@@ -39,8 +40,8 @@ const config = {
       '/formatter',
     ],
     links: [
-      { text: 'anno.wiki', link: 'https://anno.wiki' },
-      { text: 'Textus', link: 'http://okfnlabs.org/textus/' }
+      { text: 'Textus', link: 'http://okfnlabs.org/textus/' },
+      { text: 'BibJSON', link: 'https://okfnlabs.org/bibjson/' }
     ],
     frontline: false,
     ignoreIndex: true,
