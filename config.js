@@ -35,7 +35,10 @@ const config = {
     collapsedNav: [
       '/textus', // add trailing slash if enabled above
     ],
-    links: [{ text: 'anno.wiki', link: 'https://anno.wiki' }],
+    links: [
+      { text: 'anno.wiki', link: 'https://anno.wiki' },
+      { text: 'Textus', link: 'http://okfnlabs.org/textus/' }
+    ],
     frontline: false,
     ignoreIndex: true,
     title:
