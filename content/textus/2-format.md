@@ -117,7 +117,9 @@ not meaningful and such annotations will never be displayed. Text chunks are
 ordered by sequence property and joined during import, in almost all cases the
 textual data will be small enough to specify as a single block but the ability
 to split it into smaller chunks is there if this turns out not to be the case.
-Typographical annotations
+
+
+# Typographical annotations
 
 The input JSON:
 ```
@@ -157,7 +159,9 @@ Multiple CSS classes can be applied by specifying the css property as a
 whitespace seperated list of the classes to apply, exactly as you would when
 specifying a class property in HTML. The set of standard CSS classes available
 in the basic Textus installation is defined in the Textus Basic Profile later in
-this document.  Semantic annotations
+this document.
+
+# Semantic annotations
 
 These are structured and interpreted similarly to typographical annotations with
 respect to start and end positions, but must contain a type property and may
@@ -188,7 +192,10 @@ Where the date is specified it uses UTC time without seconds as defined by [ISO
 The payload property is also optional, although some annotation types may not be
 fully specified without it. Its contents are defined by the type property, in
 this example the type specifies a free text comment and the payload provides the
-comment text.  Structure markers
+comment text.
+
+
+# Structure markers
 
 While the structure is conceptually tree-shaped, you declare structure by
 indicating at which point a section starts — interpreting these assertions into
@@ -226,13 +233,13 @@ statements apply:
 ```
 
 The markers which apply at position 6 are `[a,b]` even though there is no marker
-of depth 1. At position 10 the markers which apply are `[a,c]` — marker b does
-not apply because marker c is inbetween it and the target position and has a
-lower or equal depth. In fact, marker a applies to any location within the text
-as there are no other depth 0 markers which can cancel it. At position 28 the
-markers which apply are [a,d,e] — marker e is valid as marker d is at the same
-position and therefore not considered to be `inbetween` marker e and position
-28.
+of depth 1. At position 10 the markers which apply are `[a,c]` — marker `b` does
+not apply because marker `c` is in between it and the target position and has a
+lower or equal depth. In fact, marker `a` applies to any location within the
+text as there are no other depth 0 markers which can cancel it. At position 28
+the markers which apply are `[a,d,e]` — marker `e` is valid as marker `d` is at
+the same position and therefore not considered to be 'in between' marker `e` and
+position 28.
 
 Note that the above is not the representation for structure markers, and used
 only to illustrate the range handling! The format for a structure marker in the
@@ -285,6 +292,7 @@ annotations. These are all optional, and are interpreted as follows:
   are then fixed in place once imported (that is to say they won’t be moved
   around should the structure locations change).
 
+
 # Textus Basic Profile
 
 Semantic annotations and structure nodes contain a type member. Given the value
@@ -292,7 +300,10 @@ of this field there may be an additional metadata payload required to fully
 specify the annotation or structure. While these are extensible and we expect
 different target domains to have differing requirements in this area there are
 some which are common to or useful for all kinds of texts — these types form the
-basic profile and are defined here.  Typographical Classes
+basic profile and are defined here.
+
+
+# Typographical Classes
 
 The base set of typographical classes correspond to the tag names of HTML
 elements, and will create the same effects. Styles available as part of this
@@ -302,11 +313,13 @@ scheme are
 - Paragraph formatting — p, blockquote, pre
 - Character formatting — b, i
 
+
 # Semantic Annotation Types
 
 Semantic annotations enrich the text with descriptions, provenance information,
 comments, links to related resources and similar. The basic profile includes the
 following annotation types:
+
 
 ## BibJSON Metadata
 
@@ -361,6 +374,7 @@ project here, which is maybe not ideal, but the intent is to work with that
 project to pin down the allowable keys and their interpretation in slightly
 greater detail rather than inventing our own.
 
+
 ## Free Text Comments
 
 These are the simplest annotation, consisting of a free-form comment from a
@@ -384,6 +398,7 @@ language of the comment. If omitted the default is to assume a comment in
 English, so the above example is not actually necessary (there is no distinction
 in that particular ISO standard between British and American English, for
 example, but I doubt that’s something we have to worry about).
+
 
 ## Source
 
@@ -427,6 +442,7 @@ the optional `data-url`:
 
 This set may be expanded in the future.
 
+
 ## Scene
 
 Scenes are entities within a dramatic text distinguished by a place, a time and
@@ -444,6 +460,7 @@ such that a free text comparison works at a semantic level.
   "actors" : [ "Frightened rabbit", "Scarecrow" ]
 }
 ```
+
 
 ## Letter
 
@@ -465,6 +482,7 @@ to simplify querying by date range).
   "date-name" : "Good Friday, April 5, 1718"
 }
 ```
+
 
 ## Structure Marker Types
 
