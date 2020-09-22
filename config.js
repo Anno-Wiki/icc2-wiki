@@ -18,7 +18,7 @@ const config = {
 		      </div>
 		    </a>
 		  </li>`,
-    links: [{ text: '', link: '' }],
+    links: [{ text: 'anno.wiki', link: 'https://anno.wiki' }],
     search: {
       enabled: false,
       indexName: '',
@@ -31,9 +31,12 @@ const config = {
     forcedNavOrder: [
       '/introduction', // add trailing slash if enabled above
       '/textus',
+      '/repos',
+      '/development'
     ],
     collapsedNav: [
       '/textus', // add trailing slash if enabled above
+      '/formatter',
     ],
     links: [
       { text: 'anno.wiki', link: 'https://anno.wiki' },
@@ -42,7 +45,7 @@ const config = {
     frontline: false,
     ignoreIndex: true,
     title:
-    "<a href='https://flask.palletsprojects.com/en/1.1.x/'>flask </a><div class='greenCircle'></div><a href='https://hasura.io/learn/graphql/react/introduction/'>react </a><div class='greenCircle'></div><a href='https://www.elastic.co/guide/index.html'>elastic</a>",
+    "<a href='https://github.com/Anno-Wiki'>ICC2 </a><div class='greenCircle'></div><a href='#'>documentation </a>",
   },
   siteMetadata: {
     title: 'Intertextual Canon Cloud 2 Documentation',
