@@ -16,13 +16,15 @@ So this has to be modified.
 
 For Linux, this is fairly easy. Add the following line to `/etc/sysctl.conf`:
 
-`
+```
 vm.max_map_count=262144
-`
+```
 
 And then run
 
-`sysctl -p`
+```
+sysctl -p
+```
 
 to reload.
 
@@ -33,17 +35,17 @@ you have WSL 2 enabled and a WSL 2 distro installed (Ethan uses Ubuntu). Then
 enable Ubuntu in Docker Desktop settings>resources. Next, open a command prompt
 and type
 
-`
+```
 wsl -d docker-desktop
 sysctl -w vm.max_map_count=262144
-`
+```
 
 I do not know if that is persistent. If you are not using the WSL 2 backend type
 
-`
+```
 docker-machine ssh
 sudo syctl -w vm.max_map_count=262144
-`
+```
 
 I also do not know if that is persistent.
 
