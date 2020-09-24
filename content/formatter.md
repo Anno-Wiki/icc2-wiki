@@ -4,8 +4,8 @@ metaTitle: "Introduction to the ICC formatter"
 metaDescription: "Introduction to the ICC formatter"
 ---
 
-The formatter for ICC2 is the entry point. It formats markdown files into json
-files composed of
+The formatter for ICC2 is the entry point. It formats specially marked files
+into json files composed of
 
 1. A "text" file, an array of dictionaries containing a block of text and meta
    information like offset, index, etc.
