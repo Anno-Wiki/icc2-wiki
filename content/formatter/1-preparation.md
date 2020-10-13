@@ -75,10 +75,12 @@ not recommend doing it.
 
 ## Italic and Bold
 
-Ensure that all italicized text is marked by underscores `like _this_` and all
-bold text is marked by asterisks `like *this*`. The formatter will generate
-typographical annotations for marking these spans.
+All italic uses `i` tags and bold uses `b` tags, delimited using whatever common
+delimiter is present in the document. For instance
 
+```
+This is <i>italicized</i> and this is <b>bolded</b>.
+```
 
 ## Punctuation
 
