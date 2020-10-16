@@ -14,6 +14,12 @@ virtual environment, for example).
 # Parameters
 
 
+## bookid
+
+The id for the book, a unique number, starting at 1 for the Bible and 2 for War
+and Peace, which is assigned to the book.
+
+
 ## title
 
 The title of the actual book, to be used and displayed on the page.
@@ -61,8 +67,6 @@ which must be used in the text as:
 Series of symbols are kinda nasty, best only use them for books which absolutely
 require it, and use the minimal sequence of symbols to be unique within the
 text.
-
-@TODO: Fix formatter to be capable of handling series of symbols, lol.
 
 
 ## toc
