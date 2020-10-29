@@ -9,6 +9,10 @@ so than with ICC. It often requires, with longer works, knowledge of regular
 expressions and scripting. I find Python, grep, sed, and vim to be invaluable
 tools for this purpose.
 
+Please note, the name of the fully prepared text file should be `prepared.icc`
+and should live in the directory named following the conventions detailed in
+[the Library documentation](/library).
+
 
 # Source
 
@@ -81,6 +85,11 @@ delimiter is present in the document. For instance
 ```
 This is <i>italicized</i> and this is <b>bolded</b>.
 ```
+
+Because often a piece of raw text will use underscores for italics I have
+written a script, named `underscorestoitags.py` which will convert all
+underscores to i's. Future modifications of this script will attempt the same
+for bold.
 
 ## Punctuation
 
@@ -178,17 +187,29 @@ eyes lit up so that her face was entirely...
 ```
 
 However, it is often the case that a quote will be a preformatted bit of text,
-like a quote of poetry. In that case, use `<quotepre>`:
+which has unusual spacing, like a snippet of poetry. In that case, use
+`<quotepre>`:
 
 ```
 <quotepre>
 “It’s a long, long way.
-To my native land...”
+    To my native land...”
 </quotepre>
 ```
 
 This way, we can maintain the line breaks and still have the offset, without the
 need for unnecessary indentation spaces.
+
+A still third form of quotation is text which is quoted that does not have
+special spacing, but has important line breaks. Consider the previous snippet of
+poetry without the indent. In that case, use `<preline>`:
+
+```
+<preline>
+“It’s a long, long way.
+    To my native land...”
+</preline>
+```
 
 
 # Semantic Information
@@ -206,17 +227,17 @@ our Textus doc mirror](/textus/2-format#structuremarkers) for more information
 on how that works, though our system varies from their implementation.
 
 To mark all the tocs it is useful, especially in longer works, it is useful to
-use regular expressions. Surround each toc with a `<n>` tag, where `n` is the
+use regular expressions. Surround each toc with a `<hn>` tag, where `n` is the
 numerical depth of the toc.
 
 For example, the Bible consists of testaments, books, chapters, and verses. The
 toc is thus represented thusly:
 
 ```
-<1>The Old Testament</1>
-<2>Genesis</2>
-<3>Chapter 1</3>
-<4>In the beginning...</4>
+<h1>The Old Testament</h1>
+<h2>Genesis</h2>
+<h3>Chapter 1</h3>
+<h4>In the beginning...</h4>
 ```
 
 
