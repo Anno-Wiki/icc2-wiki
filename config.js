@@ -33,7 +33,10 @@ const config = {
       '/textus',
       '/bibjson',
       '/repos',
-      '/development'
+      '/development',
+      '/formatter',
+      '/library',
+      '/insert'
     ],
     collapsedNav: [
       '/textus', // add trailing slash if enabled above
