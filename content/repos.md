@@ -7,10 +7,10 @@ metaDescription: "A list of all the ICC repositories"
 # Intertextual Canon Cloud 2
 
 1. [anno-wiki/icc2-backend][1]
+    - [anno-wiki/icc2-library][3] (submodule of `icc2-backend`)
+        - [anno-wiki/icc2-formatter][4] (submodule of `icc2-library`)
 2. [anno-wiki/icc2-frontend][2]
-3. [anno-wiki/icc2-library][3]
-4. [anno-wiki/icc2-formatter][4]
-5. [anno-wiki/icc2-wiki][5]
+3. [anno-wiki/icc2-wiki][5]
 
 # Intertextual Canon Cloud
 
